@@ -14,7 +14,7 @@ public class MultichoiceQuestion extends Question {
         alternatives = new HashMap<Long, Alternative>();;
     }
 
-    public void addAlternatives(long id, String text, double value) {
+    public void addAlternative(long id, String text, double value) {
         alternatives.put(id, new Alternative(id, text, value));
     }
 

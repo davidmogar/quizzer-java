@@ -5,8 +5,6 @@ import com.davidmogar.quizzer.domain.Grade;
 import com.davidmogar.quizzer.domain.questions.MultichoiceQuestion;
 import com.davidmogar.quizzer.domain.questions.Question;
 import com.davidmogar.quizzer.domain.questions.TrueFalseQuestion;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -26,8 +24,8 @@ public class AssessmentTest {
         HashMap<Long, List<Answer>> answers = new HashMap<Long, List<Answer>>();
 
         MultichoiceQuestion multichoiceQuestion = new MultichoiceQuestion(1, "Question 1");
-        multichoiceQuestion.addAlternatives(1, "Alternative 1", 0);
-        multichoiceQuestion.addAlternatives(2, "Alternative 2", 0.75);
+        multichoiceQuestion.addAlternative(1, "Alternative 1", 0);
+        multichoiceQuestion.addAlternative(2, "Alternative 2", 0.75);
         questions.put(1L, multichoiceQuestion);
 
         TrueFalseQuestion trueFalseQuestion = new TrueFalseQuestion(2, "Question 2");
@@ -50,30 +48,26 @@ public class AssessmentTest {
         assessment.setAnswers(answers);
     }
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
     @Test
     public void testCalculateGrades() throws Exception {
         assessment.calculateGrades();
 
-        assertTrue(assessment.getGrades().size() == 2);
-        assertEquals(assessment.getGrades().get(1L).getGrade(), 1.75, 0.05);
-        assertEquals(assessment.getGrades().get(2L).getGrade(), -0.25, 0.05);
+        assertTrue("Unexpected grades size", assessment.getGrades().size() == 2);
+        assertEquals("Unexpected grade value for id 1", assessment.getGrades().get(1L).getGrade(), 1.75, 0.05);
+        assertEquals("Unexpected grade value for id 2", assessment.getGrades().get(2L).getGrade(), -0.25, 0.05);
     }
 
     @SuppressWarnings("deprecation")
     @Test
     public void testCalculateStudentGrade() throws Exception {
-        assertEquals(assessment.calculateStudentGrade(1), 1.75, 0.05);
-        assertEquals(assessment.calculateStudentGrade(2), -0.25, 0.05);
+        assertEquals("Unexpected grade value for id 1", assessment.calculateStudentGrade(1), 1.75, 0.05);
+        assertEquals("Unexpected grade value for id 2", assessment.calculateStudentGrade(2), -0.25, 0.05);
     }
 
     @Test
     public void testValidateGrade() throws Exception {
-        assertTrue(assessment.validateGrade(new Grade(1, 1.75)));
-        assertFalse(assessment.validateGrade(new Grade(1, 0.75)));
+        assertTrue("Unexpected grade value for id 1", assessment.validateGrade(new Grade(1, 1.75)));
+        assertFalse("Unexpected grade value for id 1", assessment.validateGrade(new Grade(1, 0.75)));
     }
 
     @Test
@@ -83,13 +77,13 @@ public class AssessmentTest {
         grades.put(2L, new Grade(2, -0.25));
 
         assessment.setGrades(grades);
-        assertTrue(assessment.validateGrades());
+        assertTrue("Unexpected validation result. Expected a valid grade", assessment.validateGrades());
 
         grades = new HashMap<Long, Grade>();
         grades.put(1L, new Grade(1, 1));
         grades.put(2L, new Grade(2, 0.25));
 
         assessment.setGrades(grades);
-        assertFalse(assessment.validateGrades());
+        assertFalse("Unexpected validation result. Expected a not valid grade", assessment.validateGrades());
     }
 }

@@ -28,7 +28,7 @@ public class Assessment {
      * Calculate the grades of this assessment.
      */
     public void calculateGrades() {
-        grades = new HashMap<Long, Grade>();
+        grades = new HashMap<>();
 
         for (long studentId : answers.keySet()) {
             grades.put(studentId, new Grade(studentId, calculateStudentGrade(studentId)));
