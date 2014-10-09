@@ -8,8 +8,10 @@ public class MultichoiceQuestion extends Question {
 
     private HashMap<Long, Alternative> alternatives;
 
-    public MultichoiceQuestion() {
-        alternatives = new HashMap<Long, Alternative>();
+    public MultichoiceQuestion(long id, String questionText) {
+        super(id, questionText);
+
+        alternatives = new HashMap<Long, Alternative>();;
     }
 
     public void addAlternatives(long id, String text, double value) {
@@ -18,7 +20,18 @@ public class MultichoiceQuestion extends Question {
 
     @Override
     public double getScore(Answer answer) {
-        return 0;
+        double score = 0;
+        
+        try {
+            long alternativeId = Long.parseLong(answer.getValue());
+            if (alternatives.containsKey(alternativeId)) {
+                score = alternatives.get(alternativeId).value;
+            }
+        } catch(NumberFormatException e) {
+            /* Just return score (already initialized) */
+        }
+
+        return score;
     }
 
 }

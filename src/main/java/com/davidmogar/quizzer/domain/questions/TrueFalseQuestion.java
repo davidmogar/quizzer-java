@@ -9,16 +9,13 @@ public class TrueFalseQuestion extends Question {
     private double valueCorrect;
     private double valueIncorrect;
 
-    public TrueFalseQuestion(String feedback, boolean correct, double valueCorrect, double valueIncorrect) {
-        this.feedback = feedback;
-        this.correct = correct;
-        this.valueCorrect = valueCorrect;
-        this.valueIncorrect = valueIncorrect;
+    public TrueFalseQuestion(long id, String questionText) {
+        super(id, questionText);
     }
 
     @Override
     public double getScore(Answer answer) {
-        return 0;
+        return (Boolean.parseBoolean(answer.getValue()) == correct)? valueCorrect : valueIncorrect;
     }
 
     public String getFeedback() {

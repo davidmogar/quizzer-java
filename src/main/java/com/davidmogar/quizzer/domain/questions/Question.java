@@ -7,6 +7,11 @@ public abstract class Question {
     protected String questionText;
     protected long id;
 
+    protected Question(long id, String questionText) {
+        this.id = id;
+        this.questionText = questionText;
+    }
+
     public abstract double getScore(Answer answer);
 
     public long getId() {

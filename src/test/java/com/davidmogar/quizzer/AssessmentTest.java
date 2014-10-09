@@ -1,0 +1,95 @@
+package com.davidmogar.quizzer;
+
+import com.davidmogar.quizzer.domain.Answer;
+import com.davidmogar.quizzer.domain.Grade;
+import com.davidmogar.quizzer.domain.questions.MultichoiceQuestion;
+import com.davidmogar.quizzer.domain.questions.Question;
+import com.davidmogar.quizzer.domain.questions.TrueFalseQuestion;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+public class AssessmentTest {
+
+    private Assessment assessment;
+
+    public AssessmentTest() {
+        assessment = new Assessment();
+
+        HashMap<Long, Question> questions = new HashMap<Long, Question>();
+        HashMap<Long, List<Answer>> answers = new HashMap<Long, List<Answer>>();
+
+        MultichoiceQuestion multichoiceQuestion = new MultichoiceQuestion(1, "Question 1");
+        multichoiceQuestion.addAlternatives(1, "Alternative 1", 0);
+        multichoiceQuestion.addAlternatives(2, "Alternative 2", 0.75);
+        questions.put(1L, multichoiceQuestion);
+
+        TrueFalseQuestion trueFalseQuestion = new TrueFalseQuestion(2, "Question 2");
+        trueFalseQuestion.setCorrect(true);
+        trueFalseQuestion.setValueCorrect(1);
+        trueFalseQuestion.setValueIncorrect(-0.25);
+        questions.put(2L, trueFalseQuestion);
+
+        List<Answer> studentAnswers = new ArrayList<Answer>();
+        studentAnswers.add(new Answer(1, "2"));
+        studentAnswers.add(new Answer(2, "true"));
+        answers.put(1L, studentAnswers);
+
+        studentAnswers = new ArrayList<Answer>();
+        studentAnswers.add(new Answer(1, "0"));
+        studentAnswers.add(new Answer(2, "false"));
+        answers.put(2L, studentAnswers);
+
+        assessment.setQuestions(questions);
+        assessment.setAnswers(answers);
+    }
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @Test
+    public void testCalculateGrades() throws Exception {
+        assessment.calculateGrades();
+
+        assertTrue(assessment.getGrades().size() == 2);
+        assertEquals(assessment.getGrades().get(1L).getGrade(), 1.75, 0.05);
+        assertEquals(assessment.getGrades().get(2L).getGrade(), -0.25, 0.05);
+    }
+
+    @SuppressWarnings("deprecation")
+    @Test
+    public void testCalculateStudentGrade() throws Exception {
+        assertEquals(assessment.calculateStudentGrade(1), 1.75, 0.05);
+        assertEquals(assessment.calculateStudentGrade(2), -0.25, 0.05);
+    }
+
+    @Test
+    public void testValidateGrade() throws Exception {
+        assertTrue(assessment.validateGrade(new Grade(1, 1.75)));
+        assertFalse(assessment.validateGrade(new Grade(1, 0.75)));
+    }
+
+    @Test
+    public void testValidateGrades() throws Exception {
+        HashMap<Long, Grade> grades = new HashMap<Long, Grade>();
+        grades.put(1L, new Grade(1, 1.75));
+        grades.put(2L, new Grade(2, -0.25));
+
+        assessment.setGrades(grades);
+        assertTrue(assessment.validateGrades());
+
+        grades = new HashMap<Long, Grade>();
+        grades.put(1L, new Grade(1, 1));
+        grades.put(2L, new Grade(2, 0.25));
+
+        assessment.setGrades(grades);
+        assertFalse(assessment.validateGrades());
+    }
+}
