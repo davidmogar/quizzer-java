@@ -13,13 +13,13 @@ public class UrlReaderTest {
     @Test
     public void testGetStreamAsString() throws Exception {
         try {
-            String result = UrlReader.getStreamAsString(new URI("htt://google.com"));
+            String result = UrlReader.getStreamAsString(new URI("http://google.com2"));
             assertNotNull(result);
             assertNotEquals(result, "");
         } catch (IOException e) {
-            e.printStackTrace();
+            fail("IOException was not expected for the given URL");
         } catch (URISyntaxException e) {
-            fail("URISyntaxException is not expected for the given URL");
+            fail("URISyntaxException was not expected for the given URL");
         }
     }
 }
