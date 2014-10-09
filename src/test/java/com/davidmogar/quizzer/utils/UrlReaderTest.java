@@ -13,7 +13,7 @@ public class UrlReaderTest {
     @Test
     public void testGetStreamAsString() throws Exception {
         try {
-            String result = UrlReader.getStreamAsString(new URI("http://google.com2"));
+            String result = UrlReader.getStreamAsString(new URI("http://google.com"));
             assertNotNull(result);
             assertNotEquals(result, "");
         } catch (IOException e) {
