@@ -11,21 +11,21 @@ import java.util.List;
 public class AssessmentDeserializer {
 
     @SuppressWarnings("unchecked")
-    public static HashMap<Long, List<Answer>> deserializeAnswers(String json) {
+    public static HashMap<Long, List<Answer>> deserializeAnswers(String json) throws JsonSyntaxException {
         return deserialize(json, new AnswersDeserializer());
     }
 
     @SuppressWarnings("unchecked")
-    public static HashMap<Long, Grade> deserializeGrades(String json) {
+    public static HashMap<Long, Grade> deserializeGrades(String json) throws JsonSyntaxException {
         return deserialize(json, new GradesDeserializer());
     }
 
     @SuppressWarnings("unchecked")
-    public static HashMap<Long, Question> deserializeQuestions(String json) {
+    public static HashMap<Long, Question> deserializeQuestions(String json) throws JsonSyntaxException {
         return deserialize(json, new QuestionsDeserializer());
     }
 
-    public static HashMap deserialize(String json, JsonDeserializer deserializer) {
+    private static HashMap deserialize(String json, JsonDeserializer deserializer) {
         JsonParser parser = new JsonParser();
         JsonObject rootObject = parser.parse(json).getAsJsonObject();
 
