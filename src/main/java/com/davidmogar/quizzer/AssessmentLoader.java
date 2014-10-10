@@ -36,7 +36,8 @@ public class AssessmentLoader {
                 assessment.setGrades(AssessmentDeserializer.deserializeGrades(gradesJson));
             }
         } catch(JsonSyntaxException e) {
-            // Impossible to parse assessment. Return null
+
+            /* Impossible to parse assessment. Return null */
             assessment = null;
         }
 
