@@ -1,5 +1,6 @@
-package com.davidmogar.quizzer;
+package com.davidmogar.quizzer.loaders;
 
+import com.davidmogar.quizzer.Assessment;
 import com.davidmogar.quizzer.deserializers.AssessmentDeserializer;
 import com.davidmogar.quizzer.utils.UrlReader;
 import com.google.gson.JsonSyntaxException;
@@ -43,4 +44,5 @@ public class AssessmentLoader {
 
         return assessment;
     }
+
 }

@@ -1,4 +1,4 @@
-package com.davidmogar.quizzer.serializers;
+package com.davidmogar.quizzer.deserializers;
 
 import com.davidmogar.quizzer.deserializers.AssessmentDeserializer;
 import com.davidmogar.quizzer.domain.Answer;
