@@ -10,6 +10,7 @@ import java.util.List;
 
 public class TestsDeserializer {
 
+    @SuppressWarnings("unchecked")
     public static List<Test> deserialize(String json) {
         JsonParser parser = new JsonParser();
         JsonObject rootObject = parser.parse(json).getAsJsonObject();
