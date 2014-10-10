@@ -26,6 +26,7 @@ Quizzer thre kind of files: questions, answers and grades files. The next sectio
 
 ###Questions
 Questions files are used to store all the questions of an assessment. There are two types of questions: Multichoice and True/False questions.
+
 ```json
 { "questions": 
   [
@@ -53,7 +54,8 @@ Questions files are used to store all the questions of an assessment. There are 
 
 ###Answers
 Answers file store all the answers submited by the students.
-```
+
+```json
 { "items": 
   [
     { "studentId": 234 ,
@@ -84,7 +86,7 @@ Answers file store all the answers submited by the students.
 ###Grades
 Grades files store the grade obtained by an student in the assessment.
 
-```
+```json
 { "scores": 
   [
     { "studentId": 234, "value": 0.75 } ,
@@ -96,7 +98,8 @@ Grades files store the grade obtained by an student in the assessment.
 
 ###Tests
 There is an extra file used to test a bunch of assessments at the same time. You can check the structure of this file below:
-```
+
+```json
 { "tests": 
   [
     { "type": "score", 
