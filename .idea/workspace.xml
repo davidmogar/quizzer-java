@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1108849c-e079-45a5-b946-57df202e4485" name="Default" comment="">
+    <list default="true" id="1108849c-e079-45a5-b946-57df202e4485" name="Default" comment="Add new routes to the server&#10;&#10;Now there is a get that returns a form where the user can paste the questions and answers files contents and generate the grades.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/css/style.css" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\commons-cli-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\gson-2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\hamcrest-core-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\javax.servlet-3.0.0.v201112011016.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-http-9.0.2.v20130417.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-io-9.0.2.v20130417.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-security-9.0.2.v20130417.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-server-9.0.2.v20130417.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-servlet-9.0.2.v20130417.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-util-9.0.2.v20130417.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-webapp-9.0.2.v20130417.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-xml-9.0.2.v20130417.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\junit-4.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\slf4j-api-1.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\slf4j-simple-1.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\spark-core-2.0.0.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quizzer.iml" afterPath="$PROJECT_DIR$/Quizzer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java" afterPath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Quizzer.iws" />
@@ -25,81 +47,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AssessmentDeserializer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/AssessmentDeserializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="663">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GradesDeserializer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/GradesDeserializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="175" max-vertical-offset="714">
-              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnswersDeserializer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/AnswersDeserializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="765">
-              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestsDeserializer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/TestsDeserializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1105">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AssessmentLoader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/loaders/AssessmentLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="969">
-              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="340">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+              <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1972">
-              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Server.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Server.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3529412" vertical-offset="141" max-vertical-offset="952">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="181" max-vertical-offset="986">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,21 +69,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestsLoader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/loaders/TestsLoader.java">
+      <file leaf-file-name="index.ftl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="476">
-              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.45945945" vertical-offset="0" max-vertical-offset="666">
+              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AssessmentSerializer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/serializers/AssessmentSerializer.java">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1190">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,6 +113,34 @@
     </option>
     <option name="recentTasks">
       <list>
+        <ExternalTaskExecutionInfo>
+          <option name="executorId" value="Run" />
+          <option name="settings">
+            <ExternalSystemSettings>
+              <option name="externalProjectPath" value="$PROJECT_DIR$" />
+              <option name="externalSystemIdString" value="GRADLE" />
+              <option name="taskNames">
+                <list>
+                  <option value="build" />
+                </list>
+              </option>
+            </ExternalSystemSettings>
+          </option>
+        </ExternalTaskExecutionInfo>
+        <ExternalTaskExecutionInfo>
+          <option name="executorId" value="Run" />
+          <option name="settings">
+            <ExternalSystemSettings>
+              <option name="externalProjectPath" value="$PROJECT_DIR$" />
+              <option name="externalSystemIdString" value="GRADLE" />
+              <option name="taskNames">
+                <list>
+                  <option value="clean" />
+                </list>
+              </option>
+            </ExternalSystemSettings>
+          </option>
+        </ExternalTaskExecutionInfo>
         <ExternalTaskExecutionInfo>
           <option name="executorId" value="Run" />
           <option name="settings">
@@ -277,8 +267,8 @@
         <entry key="$PROJECT_DIR$/../Codelabs" value="9820045792836" />
         <entry key="$PROJECT_DIR$/../Git/barrelrum" value="11217328809690" />
         <entry key="$PROJECT_DIR$/../Nave Justiciera" value="9825554738957" />
+        <entry key="$PROJECT_DIR$" value="2825814583921" />
         <entry key="$PROJECT_DIR$/../Sparrow" value="9815864267738" />
-        <entry key="$PROJECT_DIR$" value="2825857415832" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -299,12 +289,18 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.0.0/be20ee2305327fd846783deb0caf41f1f0937dcd/spark-core-2.0.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.0.0/10c8252f6aabe01d188b5341ad3289f7a6813382/spark-core-2.0.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.2/58d38f68d4a867d4552ae27960bb348d7eaa1297/slf4j-api-1.7.2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.2/81d61b7f33ebeab314e07de0cc596f8e858d97/slf4j-api-1.7.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-template-freemarker/2.0.0/bce22449903c58b40f3e7f0e34fed4e337ee3949/spark-template-freemarker-2.0.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-template-freemarker/2.0.0/ded988d0dd3813c1149ecb560a386e8db90f694f/spark-template-freemarker-2.0.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/acd62e31cc314266e73eebed0b6dd7ea974a0ed/slf4j-api-1.7.7-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/2b8019b6249bb05d81d3a3094e468753e2b21311/slf4j-api-1.7.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.7/3150039466ad03e6ef1c7ec1c2cbb0d96710cf64/slf4j-simple-1.7.7-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.7/8095d0b9f7e0a9cd79a663c740e0f8fb31d0e2c8/slf4j-simple-1.7.7.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/9.0.2.v20130417/2298f5186374c3822e912e8a9053713027aba229/jetty-server-9.0.2.v20130417-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/9.0.2.v20130417/f2e4f1d2cb1d4ad07b71f4677417345e64e9979d/jetty-server-9.0.2.v20130417.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-webapp/9.0.2.v20130417/3c5d93a7fe159ab4687cbed273e1923ce463fe36/jetty-webapp-9.0.2.v20130417-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-webapp/9.0.2.v20130417/dd8ddd2a736219331697c2e9ca8548f940cfa39a/jetty-webapp-9.0.2.v20130417.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.freemarker/freemarker/2.3.19/ab4cb735b398b842a67e0010ab4d99856bae20bb/freemarker-2.3.19-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.freemarker/freemarker/2.3.19/a251045e5fadd02824d17f1aa8c412accf1aa1c9/freemarker-2.3.19.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet/3.0.0.v201112011016/15c914135cf30177b83c321250c458396289cd37/javax.servlet-3.0.0.v201112011016-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet/3.0.0.v201112011016/aaaa85845fb5c59da00193f06b8e5278d8bf3f8/javax.servlet-3.0.0.v201112011016.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/9.0.2.v20130417/21a5f25dabb16fdce987e86ecaacc960ae3db276/jetty-http-9.0.2.v20130417-sources.jar" />
@@ -461,19 +457,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/domain/Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/davidmogar/quizzer/deserializers/TestsDeserializerTest.java" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/TestsDeserializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/loaders/AssessmentLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/AnswersDeserializer.java" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/css/reset.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="54" />
     <option name="y" value="-8" />
-    <option name="width" value="1234" />
-    <option name="height" value="1040" />
+    <option name="width" value="1874" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -504,12 +506,6 @@
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
-  <component name="ProjectStructureProblems">
-    <ignored-problems>
-      <problem id="unused-library(library:project:com.google.code.gson:gson:2.3)" />
-      <problem id="unused-library(library:project:junit:junit:4.11)" />
-    </ignored-problems>
-  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -524,6 +520,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -538,7 +535,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
+              <option name="myItemId" value="Quizzer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -548,7 +545,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
+              <option name="myItemId" value="Quizzer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quizzer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quizzer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -556,37 +567,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
+              <option name="myItemId" value="freemarker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -596,85 +585,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loaders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deserializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -686,41 +597,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -730,37 +611,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -769,118 +620,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loaders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deserializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestsDeserializer.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deserializers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -895,7 +639,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -926,6 +670,13 @@
       <recent name="com.davidmogar.quizzer.loaders" />
       <recent name="com.davidmogar.quizzer.serialization" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources\freemarker" />
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources\templates\freemarker" />
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources\template\freemarker" />
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources\templates" />
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources\template" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.davidmogar.quizzer.serialization" />
     </key>
@@ -935,8 +686,15 @@
       <recent name="com.davidmogar.quizzer" />
       <recent name="com.davidmogar.quizzer.domain" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources" />
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources\spark\templates\freemarker" />
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources\spark\template\freemarker" />
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources\spark\template" />
+      <recent name="D:\Users\David\IdeaProjects\Quizzer\src\main\resources\spark" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Quizzer (server)">
+  <component name="RunManager" selected="Application.Quizzer (help)">
     <configuration default="false" name="Quizzer (help)" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.davidmogar.quizzer.Main" />
       <option name="VM_PARAMETERS" value="" />
@@ -984,6 +742,44 @@
       <method>
         <option name="Make" enabled="false" />
       </method>
+    </configuration>
+    <configuration default="false" name="Quizzer [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <RunnerSettings RunnerId="ExternalSystemTaskRunner" />
+      <ConfigurationWrapper RunnerId="ExternalSystemTaskRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Quizzer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <RunnerSettings RunnerId="ExternalSystemTaskRunner" />
+      <ConfigurationWrapper RunnerId="ExternalSystemTaskRunner" />
+      <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -1204,19 +1000,23 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="6">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Application.Quizzer (tests)" />
       <item index="1" class="java.lang.String" itemvalue="Application.Quizzer (server)" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.All in Quizzer" />
       <item index="3" class="java.lang.String" itemvalue="Application.Quizzer (help)" />
       <item index="4" class="java.lang.String" itemvalue="Gradle.quizzer-java [buildDependents]" />
       <item index="5" class="java.lang.String" itemvalue="Groovy.build" />
+      <item index="6" class="java.lang.String" itemvalue="Gradle.Quizzer [clean]" />
+      <item index="7" class="java.lang.String" itemvalue="Gradle.Quizzer [build]" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Quizzer (help)" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.quizzer-java [buildDependents]" />
-        <item index="2" class="java.lang.String" itemvalue="Groovy.build" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.Quizzer [build]" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.Quizzer [clean]" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.quizzer-java [buildDependents]" />
+        <item index="4" class="java.lang.String" itemvalue="Groovy.build" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1326,33 +1126,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1234" height="1040" extended-state="6" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2555066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25414938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39867842" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964224" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3246888" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.095920615" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29897785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33590308" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1323043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33506224" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1430,47 +1230,21 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/domain/Grade.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="595">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/GradesDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="782">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="391">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/serializers/AssessmentSerializer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/domain/questions/TrueFalseQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1003">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/domain/Answer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="612">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="935">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1478,7 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="2006">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1486,7 +1259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="651" max-vertical-offset="1479">
           <caret line="82" column="44" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1494,7 +1266,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="170">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1502,7 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="170">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1510,7 +1280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1556,20 +1325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gson-2.3.jar!/com/google/gson/JsonObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5285714" vertical-offset="214" max-vertical-offset="799">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gson-2.3.jar!/com/google/gson/JsonElement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40714285" vertical-offset="418" max-vertical-offset="1003">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/domain/Answer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
@@ -1595,7 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1411">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1627,18 +1381,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/net/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6550" max-vertical-offset="20978">
-          <caret line="426" column="19" selection-start-line="426" selection-start-column="19" selection-end-line="426" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Assessment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3328" vertical-offset="200" max-vertical-offset="1717">
           <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1667,7 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1675,9 +1420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="544">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1693,7 +1435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1088">
           <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="32" selection-end-column="99" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1715,7 +1456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="663">
           <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1730,7 +1470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1738,15 +1477,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
           <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/serializers/AssessmentSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/loaders/AssessmentLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="969">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/AssessmentDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="663">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/AnswersDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1758,60 +1516,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/serializers/AssessmentSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/spark-core-2.0.0.jar!/spark/Request.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3489279" vertical-offset="705" max-vertical-offset="1581">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/loaders/AssessmentLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="969">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/AnswersDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/GradesDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
           <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/AssessmentDeserializer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="663">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.9407666" vertical-offset="276" max-vertical-offset="918">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3529412" vertical-offset="141" max-vertical-offset="952">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="181" max-vertical-offset="986">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1190">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45945945" vertical-offset="0" max-vertical-offset="666">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1891,7 +1641,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>com.sparkjava:spark-core:2.0.0</last-edited>
+          <last-edited>Gradle: gson-2.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
