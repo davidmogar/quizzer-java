@@ -26,6 +26,15 @@ public class AssessmentLoader {
         return createAssessment(questionsJson, answersJson, gradesJson);
     }
 
+    public static Assessment loadAssessment(String questionsJson, String answersJson,
+            String gradesJson) throws IOException {
+        if (questionsJson == null || answersJson == null) {
+            throw new IllegalArgumentException("Questions and answers JSONs cannot be null");
+        }
+
+        return createAssessment(questionsJson, answersJson, gradesJson);
+    }
+
     private static Assessment createAssessment(String questionsJson, String answersJson, String gradesJson) {
         Assessment assessment = new Assessment();
 
