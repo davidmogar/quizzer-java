@@ -26,7 +26,7 @@ Quizzer thre kind of files: questions, answers and grades files. The next sectio
 
 ###Questions
 Questions files are used to store all the questions of an assessment. There are two types of questions: Multichoice and True/False questions.
-```
+```json
 { "questions": 
   [
     { "type": "multichoice", 
