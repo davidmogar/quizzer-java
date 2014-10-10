@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1108849c-e079-45a5-b946-57df202e4485" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-cli-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javax.servlet-3.0.0.v201112011016.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-http-9.0.2.v20130417.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-io-9.0.2.v20130417.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-security-9.0.2.v20130417.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-server-9.0.2.v20130417.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-servlet-9.0.2.v20130417.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-util-9.0.2.v20130417.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-webapp-9.0.2.v20130417.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-xml-9.0.2.v20130417.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/slf4j-api-1.7.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/slf4j-simple-1.7.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/spark-core-2.0.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/loaders/AssessmentLoader.java" afterPath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/loaders/AssessmentLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quizzer.iml" afterPath="$PROJECT_DIR$/Quizzer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java" afterPath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Quizzer.iws" />
@@ -114,8 +98,8 @@
       <file leaf-file-name="Server.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54738563" vertical-offset="90" max-vertical-offset="952">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.3529412" vertical-offset="141" max-vertical-offset="952">
+              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1330,7 +1314,11 @@
       <created>1412935792397</created>
       <updated>1412935792397</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add new routes to the server&#10;&#10;Now there is a get that returns a form where the user can paste the questions and answers files contents and generate the grades.">
+      <created>1412940621382</created>
+      <updated>1412940621382</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1338,7 +1326,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2555066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2555066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1425,18 +1413,11 @@
     <MESSAGE value="Add Spark dependenc" />
     <MESSAGE value="Add command line options" />
     <MESSAGE value="Add small test Spark server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add small test Spark server" />
+    <MESSAGE value="Add new routes to the server&#10;&#10;Now there is a get that returns a form where the user can paste the questions and answers files contents and generate the grades." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new routes to the server&#10;&#10;Now there is a get that returns a form where the user can paste the questions and answers files contents and generate the grades." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="19" />
     </breakpoint-manager>
   </component>
@@ -1822,8 +1803,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54738563" vertical-offset="90" max-vertical-offset="952">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.3529412" vertical-offset="141" max-vertical-offset="952">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
