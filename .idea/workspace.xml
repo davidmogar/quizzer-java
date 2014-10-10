@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1108849c-e079-45a5-b946-57df202e4485" name="Default" comment="Add new routes to the server&#10;&#10;Now there is a get that returns a form where the user can paste the questions and answers files contents and generate the grades.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/css/style.css" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\commons-cli-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\gson-2.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\hamcrest-core-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\javax.servlet-3.0.0.v201112011016.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-http-9.0.2.v20130417.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-io-9.0.2.v20130417.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-security-9.0.2.v20130417.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-server-9.0.2.v20130417.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-servlet-9.0.2.v20130417.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-util-9.0.2.v20130417.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-webapp-9.0.2.v20130417.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\jetty-xml-9.0.2.v20130417.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\junit-4.11.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\slf4j-api-1.7.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\slf4j-simple-1.7.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\David\IdeaProjects\Quizzer\lib\spark-core-2.0.0.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quizzer.iml" afterPath="$PROJECT_DIR$/Quizzer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java" afterPath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+    <list default="true" id="1108849c-e079-45a5-b946-57df202e4485" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Quizzer.iws" />
@@ -69,11 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ftl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.ftl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45945945" vertical-offset="0" max-vertical-offset="666">
+            <state vertical-scroll-proportion="-12.24" vertical-offset="0" max-vertical-offset="595">
               <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5904486" vertical-offset="918" max-vertical-offset="1802">
+              <caret line="88" column="71" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -458,7 +447,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/davidmogar/quizzer/deserializers/TestsDeserializerTest.java" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/TestsDeserializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/loaders/AssessmentLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/AnswersDeserializer.java" />
         <option value="$PROJECT_DIR$/public/index.html" />
@@ -468,6 +456,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Server.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Main.java" />
       </list>
     </option>
   </component>
@@ -620,6 +609,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quizzer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1122,7 +1119,11 @@
       <created>1412940754853</created>
       <updated>1412940754853</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add Freemark template and an index page">
+      <created>1412958810429</created>
+      <updated>1412958810429</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1130,7 +1131,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25414938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25414938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1218,7 +1219,8 @@
     <MESSAGE value="Add command line options" />
     <MESSAGE value="Add small test Spark server" />
     <MESSAGE value="Add new routes to the server&#10;&#10;Now there is a get that returns a form where the user can paste the questions and answers files contents and generate the grades." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new routes to the server&#10;&#10;Now there is a get that returns a form where the user can paste the questions and answers files contents and generate the grades." />
+    <MESSAGE value="Add Freemark template and an index page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Freemark template and an index page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1508,14 +1510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="824" max-vertical-offset="1972">
-          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/deserializers/GradesDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
@@ -1559,8 +1553,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45945945" vertical-offset="0" max-vertical-offset="666">
+        <state vertical-scroll-proportion="-12.24" vertical-offset="0" max-vertical-offset="595">
           <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5904486" vertical-offset="918" max-vertical-offset="1802">
+          <caret line="88" column="71" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="71" />
           <folding />
         </state>
       </provider>

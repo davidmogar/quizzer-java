@@ -86,7 +86,7 @@ public class Main {
     }
 
     private void setCommandLineOptions() {
-        options.addOption("q", "questions", true, "URL to the quiz file");
+        options.addOption("q", "questions", true, "URL to the questions file");
         options.addOption("a", "answers", true, "URL to the assessments file");
         options.addOption("o", "output", false, "Generate output");
         options.addOption("t", "tests", true, "Validate assessments in tests file");
