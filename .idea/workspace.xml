@@ -79,9 +79,12 @@
       <file leaf-file-name="Assessment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Assessment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56875" vertical-offset="537" max-vertical-offset="1479">
-              <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
-              <folding />
+            <state vertical-scroll-proportion="0.2921875" vertical-offset="0" max-vertical-offset="1581">
+              <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+              <folding>
+                <element signature="e#419#420#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1141,7 +1144,11 @@
       <created>1413019823410</created>
       <updated>1413019823410</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Refactor validateGrade method">
+      <created>1413037909165</created>
+      <updated>1413037909165</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1239,7 +1246,8 @@
     <MESSAGE value="Add new routes to the server&#10;&#10;Now there is a get that returns a form where the user can paste the questions and answers files contents and generate the grades." />
     <MESSAGE value="Add Freemark template and an index page" />
     <MESSAGE value="Rename questionText variable to text" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename questionText variable to text" />
+    <MESSAGE value="Refactor validateGrade method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor validateGrade method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1621,9 +1629,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/davidmogar/quizzer/Assessment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56875" vertical-offset="537" max-vertical-offset="1479">
-          <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
-          <folding />
+        <state vertical-scroll-proportion="0.2921875" vertical-offset="0" max-vertical-offset="1581">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+          <folding>
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

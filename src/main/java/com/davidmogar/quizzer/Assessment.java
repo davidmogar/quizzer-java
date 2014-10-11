@@ -14,7 +14,7 @@ public class Assessment {
     private HashMap<Long, Grade> grades;
 
     public Assessment() {
-        this(new HashMap<Long, Question>(), new HashMap<Long, List<Answer>>(), new HashMap<Long, Grade>());
+        this(new HashMap<>(), new HashMap<>(), new HashMap<>());
     }
 
     public Assessment(HashMap<Long, Question> questions, HashMap<Long, List<Answer>> answers,
@@ -56,7 +56,13 @@ public class Assessment {
     }
 
     public boolean validateGrade(Grade grade) {
-        return grade.getGrade() == calculateStudentGrade(grade.getStudentId());
+        boolean valid = false;
+
+        if (grade != null) {
+            valid = grade.getGrade() == calculateStudentGrade(grade.getStudentId());
+        }
+
+        return valid;
     }
 
     public boolean validateGrades() {
