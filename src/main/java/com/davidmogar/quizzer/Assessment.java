@@ -69,7 +69,7 @@ public class Assessment {
         boolean valid = true;
 
         for (Grade grade : grades.values()) {
-            if (valid = validateGrade(grade)) {
+            if (!(valid = validateGrade(grade))) {
                 break;
             }
         }

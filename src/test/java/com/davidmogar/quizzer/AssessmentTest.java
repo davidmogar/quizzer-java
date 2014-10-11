@@ -34,12 +34,12 @@ public class AssessmentTest {
         trueFalseQuestion.setValueIncorrect(-0.25);
         questions.put(2L, trueFalseQuestion);
 
-        List<Answer> studentAnswers = new ArrayList<Answer>();
+        List<Answer> studentAnswers = new ArrayList<>();
         studentAnswers.add(new Answer(1, "2"));
         studentAnswers.add(new Answer(2, "true"));
         answers.put(1L, studentAnswers);
 
-        studentAnswers = new ArrayList<Answer>();
+        studentAnswers = new ArrayList<>();
         studentAnswers.add(new Answer(1, "0"));
         studentAnswers.add(new Answer(2, "false"));
         answers.put(2L, studentAnswers);
@@ -66,21 +66,21 @@ public class AssessmentTest {
 
     @Test
     public void testValidateGrade() throws Exception {
-        assertTrue("Unexpected grade value for id 1", assessment.validateGrade(new Grade(1, 1.75)));
-        assertFalse("Unexpected grade value for id 1", assessment.validateGrade(new Grade(1, 0.75)));
+        assertTrue("Unexpected grade validation result for id 1", assessment.validateGrade(new Grade(1, 1.75)));
+        assertFalse("Unexpected grade validation result for id 2", assessment.validateGrade(new Grade(1, 0.75)));
     }
 
     @Test
     public void testValidateGrades() throws Exception {
-        HashMap<Long, Grade> grades = new HashMap<Long, Grade>();
+        HashMap<Long, Grade> grades = new HashMap<>();
         grades.put(1L, new Grade(1, 1.75));
         grades.put(2L, new Grade(2, -0.25));
 
         assessment.setGrades(grades);
         assertTrue("Unexpected validation result. Expected a valid grade", assessment.validateGrades());
 
-        grades = new HashMap<Long, Grade>();
-        grades.put(1L, new Grade(1, 1));
+        grades = new HashMap<>();
+        grades.put(1L, new Grade(1, 1.75));
         grades.put(2L, new Grade(2, 0.25));
 
         assessment.setGrades(grades);
