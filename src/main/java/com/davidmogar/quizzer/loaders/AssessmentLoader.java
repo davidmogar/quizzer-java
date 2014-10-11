@@ -10,17 +10,17 @@ import java.net.URL;
 
 public class AssessmentLoader {
 
-    public static Assessment loadAssessment(URL questionsUri, URL answersUri, URL gradesUri) throws IOException {
-        if (questionsUri == null || answersUri == null) {
-            throw new IllegalArgumentException("Questions and answers URIs cannot be null");
+    public static Assessment loadAssessment(URL questionsUrl, URL answersUrl, URL gradesUrl) throws IOException {
+        if (questionsUrl == null || answersUrl == null) {
+            throw new IllegalArgumentException("Questions and answers URLs cannot be null");
         }
 
-        String questionsJson = UrlReader.getStreamAsString(questionsUri);
-        String answersJson = UrlReader.getStreamAsString(answersUri);
+        String questionsJson = UrlReader.getStreamAsString(questionsUrl);
+        String answersJson = UrlReader.getStreamAsString(answersUrl);
 
         String gradesJson = null;
-        if (gradesUri != null) {
-            gradesJson = UrlReader.getStreamAsString(gradesUri);
+        if (gradesUrl != null) {
+            gradesJson = UrlReader.getStreamAsString(gradesUrl);
         }
 
         return createAssessment(questionsJson, answersJson, gradesJson);
