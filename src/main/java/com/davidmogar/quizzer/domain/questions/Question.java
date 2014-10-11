@@ -4,12 +4,12 @@ import com.davidmogar.quizzer.domain.Answer;
 
 public abstract class Question {
 
-    protected String questionText;
+    protected String text;
     protected long id;
 
-    protected Question(long id, String questionText) {
+    protected Question(long id, String text) {
         this.id = id;
-        this.questionText = questionText;
+        this.text = text;
     }
 
     public abstract double getScore(Answer answer);
@@ -22,12 +22,12 @@ public abstract class Question {
         this.id = id;
     }
 
-    public String getQuestionText() {
-        return questionText;
+    public String getText() {
+        return text;
     }
 
-    public void setQuestionText(String questionText) {
-        this.questionText = questionText;
+    public void setText(String text) {
+        this.text = text;
     }
 
 
