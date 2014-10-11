@@ -56,21 +56,7 @@ public class Assessment {
     }
 
     public boolean validateGrade(Grade grade) {
-        double computedGrade = 0;
-
-        long studentId = grade.getStudentId();
-
-        if (answers.containsKey(studentId)) {
-            for (Answer answer : answers.get(studentId)) {
-                long questionId = answer.getQuestionId();
-
-                if (questions.containsKey(questionId)) {
-                    computedGrade += questions.get(questionId).getScore(answer);
-                }
-            }
-        }
-
-        return computedGrade == grade.getGrade();
+        return grade.getGrade() == calculateStudentGrade(grade.getStudentId());
     }
 
     public boolean validateGrades() {
