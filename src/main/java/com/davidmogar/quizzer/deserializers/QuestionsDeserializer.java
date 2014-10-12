@@ -3,6 +3,7 @@ package com.davidmogar.quizzer.deserializers;
 
 import com.davidmogar.quizzer.domain.Grade;
 import com.davidmogar.quizzer.domain.questions.MultichoiceQuestion;
+import com.davidmogar.quizzer.domain.questions.NumericalQuestion;
 import com.davidmogar.quizzer.domain.questions.Question;
 import com.davidmogar.quizzer.domain.questions.TrueFalseQuestion;
 import com.google.gson.*;
@@ -36,6 +37,9 @@ public class QuestionsDeserializer implements JsonDeserializer<HashMap<Long, Que
                 case "multichoice":
                     question = createMultichoiceQuestion(object);
                     break;
+                case "numerical":
+                    question = createNumericalQuestion(object);
+                    break;
                 case "truefalse":
                     question = createTrueFalseQuestion(object);
             }
@@ -60,6 +64,21 @@ public class QuestionsDeserializer implements JsonDeserializer<HashMap<Long, Que
 
             }
         } catch(Exception e) {
+            // Impossible to parse object. Skip it
+        }
+
+        return question;
+    }
+
+    private NumericalQuestion createNumericalQuestion(JsonObject object) {
+        NumericalQuestion question = null;
+
+        try {
+            question = new NumericalQuestion(object.get("id").getAsLong(), object.get("questionText").getAsString());
+            question.setCorrect(object.get("correct").getAsDouble());
+            question.setValueCorrect(object.get("valueOK").getAsDouble());
+            question.setValueIncorrect(object.get("valueFailed").getAsDouble());
+        } catch (Exception e) {
             // Impossible to parse object. Skip it
         }
 

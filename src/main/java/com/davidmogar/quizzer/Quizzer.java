@@ -12,11 +12,11 @@ import java.util.HashMap;
 
 import static spark.Spark.get;
 
-public class Main {
+public class Quizzer {
 
     private Options options;
 
-    public Main() {
+    public Quizzer() {
         options = new Options();
 
         setCommandLineOptions();
@@ -32,7 +32,7 @@ public class Main {
                 grades = assessment.getGrades();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            // Return default value
         }
 
         return grades;
@@ -42,13 +42,19 @@ public class Main {
         boolean valid = true;
 
         for (Test test : TestsLoader.loadTests(url)) {
-            Assessment assessment = AssessmentLoader.loadAssessment(test.getQuestionsUrl(), test.getAnswersUrl(),
-                    test.getGradesUrl());
-            if (assessment != null) {
-                valid = assessment.validateGrades();
-                if (!valid) {
-                    break;
+            try {
+                Assessment assessment = AssessmentLoader.loadAssessment(test.getQuestionsUrl(), test.getAnswersUrl(),
+                        test.getGradesUrl());
+                if (assessment != null) {
+                    if (assessment.validateGrades()) {
+                        System.out.println("Test valid");
+                    } else {
+                        valid = false;
+                        System.err.println("Test not valid");
+                    }
                 }
+            } catch (IOException e) {
+                valid = false;
             }
         }
 
@@ -81,24 +87,24 @@ public class Main {
     }
 
     private void setCommandLineOptions() {
-        options.addOption("q", "questions", true, "URL to the questions file");
-        options.addOption("a", "answers", true, "URL to the assessments file");
-        options.addOption("o", "output", false, "Generate output");
-        options.addOption("t", "tests", true, "Validate assessments in tests file");
-        options.addOption("h", "help", false, "Show this help");
+        options.addOption("q", true, "URL to the questions file");
+        options.addOption("a", true, "URL to the answers file");
+        options.addOption("o", false, "Generate output");
+        options.addOption("t", true, "Validate assessments in tests file");
+        options.addOption("h", false, "Show this help");
     }
 
     private void showHelp() {
         HelpFormatter helpFormatter = new HelpFormatter();
-        helpFormatter.printHelp("Main", options);
+        helpFormatter.printHelp("java Quizzer [options]", options);
     }
 
     public static void main(String[] args) {
-        Main main = new Main();
+        Quizzer quizzer = new Quizzer();
         try {
-            main.parseArguments(args);
+            quizzer.parseArguments(args);
         } catch (IOException e) {
-            System.err.append("There was a problem trying to process the url: " + e.getMessage());
+            System.err.append("There was a problem while executing the program: " + e.getMessage());
         }
     }
 

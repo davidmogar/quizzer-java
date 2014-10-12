@@ -2,15 +2,14 @@ package com.davidmogar.quizzer.domain.questions;
 
 import com.davidmogar.quizzer.domain.Answer;
 
-public class TrueFalseQuestion extends Question {
+public class NumericalQuestion extends Question {
 
-    private String feedback;
-    private boolean correct;
+    private double correct;
     private double valueCorrect;
     private double valueIncorrect;
 
-    public TrueFalseQuestion(long id, String questionText) {
-        super(id, questionText);
+    public NumericalQuestion(long id, String text) {
+        super(id, text);
     }
 
     @Override
@@ -18,7 +17,7 @@ public class TrueFalseQuestion extends Question {
         double score = 0;
 
         try {
-            score = (Boolean.parseBoolean(answer.getValue()) == correct) ? valueCorrect : valueIncorrect;
+            score = (Double.parseDouble(answer.getValue()) == correct) ? valueCorrect : valueIncorrect;
         } catch (Exception e) {
             // Return default value
         }
@@ -26,19 +25,11 @@ public class TrueFalseQuestion extends Question {
         return score;
     }
 
-    public String getFeedback() {
-        return feedback;
-    }
-
-    public void setFeedback(String feedback) {
-        this.feedback = feedback;
-    }
-
-    public boolean isCorrect() {
+    public double getCorrect() {
         return correct;
     }
 
-    public void setCorrect(boolean correct) {
+    public void setCorrect(double correct) {
         this.correct = correct;
     }
 
