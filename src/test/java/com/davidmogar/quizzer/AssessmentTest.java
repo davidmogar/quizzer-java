@@ -40,7 +40,7 @@ public class AssessmentTest {
         answers.put(1L, studentAnswers);
 
         studentAnswers = new ArrayList<>();
-        studentAnswers.add(new Answer(1, "0"));
+        studentAnswers.add(new Answer(1, "1"));
         studentAnswers.add(new Answer(2, "false"));
         answers.put(2L, studentAnswers);
 
