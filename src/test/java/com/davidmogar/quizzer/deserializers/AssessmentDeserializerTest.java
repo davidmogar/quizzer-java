@@ -1,6 +1,5 @@
 package com.davidmogar.quizzer.deserializers;
 
-import com.davidmogar.quizzer.deserializers.AssessmentDeserializer;
 import com.davidmogar.quizzer.domain.Answer;
 import com.davidmogar.quizzer.domain.Grade;
 import com.davidmogar.quizzer.domain.questions.MultichoiceQuestion;
@@ -12,7 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
 
 public class AssessmentDeserializerTest {
 
