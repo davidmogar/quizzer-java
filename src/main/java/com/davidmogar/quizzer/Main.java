@@ -64,21 +64,16 @@ public class Main {
 
             if (args.length == 0) {
                 Server.startServer();
+            } else if (commandLine.hasOption("h")) {
+                showHelp();
+            } else if (commandLine.hasOption("t")) {
+                    boolean valid = validateAssessments(new URL(commandLine.getOptionValue("t")));
+                    System.out.println(valid ? "All tests OK" : "Tests failed");
+            } else if (commandLine.hasOption("a") && commandLine.hasOption("q")) {
+                HashMap<Long, Grade> grades = calculateGrades(new URL(commandLine.getOptionValue("q")),
+                        new URL(commandLine.getOptionValue("a")));
             } else {
-                if (commandLine.hasOption("h")) {
-                    showHelp();
-                } else {
-                    if (commandLine.hasOption("t")) {
-                        boolean valid = validateAssessments(new URL(commandLine.getOptionValue("t")));
-                        System.out.println(valid ? "All tests OK" : "Tests failed");
-                    } else {
-                        if (commandLine.hasOption("a") && commandLine.hasOption("q")) {
-                            HashMap<Long, Grade> grades = calculateGrades(new URL(commandLine.getOptionValue("q")),
-                                    new URL(commandLine.getOptionValue("a")));
-
-                        }
-                    }
-                }
+                showHelp();
             }
         } catch (ParseException e) {
             e.printStackTrace();
