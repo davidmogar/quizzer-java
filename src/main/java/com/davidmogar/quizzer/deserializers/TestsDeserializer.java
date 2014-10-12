@@ -4,6 +4,7 @@ import com.davidmogar.quizzer.domain.Test;
 import com.google.gson.*;
 
 import java.lang.reflect.Type;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +55,18 @@ class TestsJsonDeserializer implements JsonDeserializer<List<Test>> {
         }
 
         return test;
+    }
+
+    private URL getURL(String path) {
+        URL url = null;
+
+        try {
+            url = new URL(path);
+        } catch (MalformedURLException e) {
+            url = getClass().getResource(path);
+        }
+
+        return null;
     }
 
 }
