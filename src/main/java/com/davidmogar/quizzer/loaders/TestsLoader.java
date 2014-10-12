@@ -15,8 +15,8 @@ public class TestsLoader {
             throw new IllegalArgumentException("Tests URL cannot be null");
         }
 
-        String questionsJson = UrlReader.getStreamAsString(testsUrl);
-        return TestsDeserializer.deserialize(questionsJson);
+        String testsJson = UrlReader.getStreamAsString(testsUrl);
+        return TestsDeserializer.deserialize(testsJson);
     }
 
 }
