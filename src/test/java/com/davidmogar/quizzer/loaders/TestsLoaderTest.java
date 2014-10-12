@@ -19,7 +19,7 @@ public class TestsLoaderTest {
         try {
             List<com.davidmogar.quizzer.domain.Test> tests = TestsLoader.loadTests(testsUrl);
             assertNotNull("Assessment not loaded", tests);
-            assertTrue("Unexpected tests list size", tests.size() == 2);
+            assertTrue("Unexpected tests list size", tests.size() == 1);
         } catch(IOException e) {
             fail("Exception not expected");
         }

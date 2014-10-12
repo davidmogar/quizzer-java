@@ -16,6 +16,7 @@ public class TestsLoader {
         }
 
         String testsJson = UrlReader.getStreamAsString(testsUrl);
+
         return TestsDeserializer.deserialize(testsJson);
     }
 
