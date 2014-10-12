@@ -60,7 +60,7 @@ public class AssessmentDeserializerTest {
         assertTrue("Unexpected size for questions map", questions.size() == 2);
         assertTrue("Unexpected type for question 1", questions.get(1L) instanceof MultichoiceQuestion);
         assertTrue("Unexpected type for question 2", questions.get(2L) instanceof TrueFalseQuestion);
-        assertTrue("Unexpected value for questions 2", ((TrueFalseQuestion) questions.get(2L)).isCorrect());
+        assertTrue("Unexpected value for question 2", ((TrueFalseQuestion) questions.get(2L)).isCorrect());
 
         HashMap<Long, List<Answer>> answers = AssessmentDeserializer.deserializeAnswers(ANSWERS_JSON);
         assertEquals("Unexpected score for answer 1 of student 234",
