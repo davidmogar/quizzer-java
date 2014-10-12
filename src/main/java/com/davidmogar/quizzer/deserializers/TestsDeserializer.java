@@ -45,9 +45,9 @@ class TestsJsonDeserializer implements JsonDeserializer<List<Test>> {
         Test test = null;
 
         try {
-            URL questionsUrl = new URL(object.get("quizz").getAsString());
-            URL answersUrl = new URL(object.get("assessment").getAsString());
-            URL gradesUrl = new URL(object.get("scores").getAsString());
+            URL questionsUrl = getUrl(object.get("quizz").getAsString());
+            URL answersUrl = getUrl(object.get("assessment").getAsString());
+            URL gradesUrl = getUrl(object.get("scores").getAsString());
 
             test = new Test(questionsUrl, answersUrl, gradesUrl);
         } catch(Exception e) {
@@ -57,7 +57,7 @@ class TestsJsonDeserializer implements JsonDeserializer<List<Test>> {
         return test;
     }
 
-    private URL getURL(String path) {
+    private URL getUrl(String path) {
         URL url = null;
 
         try {
@@ -66,7 +66,7 @@ class TestsJsonDeserializer implements JsonDeserializer<List<Test>> {
             url = getClass().getResource(path);
         }
 
-        return null;
+        return url;
     }
 
 }
