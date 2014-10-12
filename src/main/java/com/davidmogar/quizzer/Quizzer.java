@@ -4,6 +4,7 @@ import com.davidmogar.quizzer.domain.Grade;
 import com.davidmogar.quizzer.domain.Test;
 import com.davidmogar.quizzer.loaders.AssessmentLoader;
 import com.davidmogar.quizzer.loaders.TestsLoader;
+import com.google.gson.Gson;
 import org.apache.commons.cli.*;
 
 import java.io.IOException;
@@ -22,20 +23,19 @@ public class Quizzer {
         setCommandLineOptions();
     }
 
-    public HashMap<Long, Grade> calculateGrades(URL questionsUrl, URL answersURL) {
-        HashMap<Long, Grade> grades = null;
+    public Assessment calculateGrades(URL questionsUrl, URL answersURL) {
+        Assessment assessment = null;
 
         try {
-            Assessment assessment = AssessmentLoader.loadAssessment(questionsUrl, answersURL, null);
+            assessment = AssessmentLoader.loadAssessment(questionsUrl, answersURL, null);
             if (assessment != null) {
                 assessment.calculateGrades();
-                grades = assessment.getGrades();
             }
         } catch (IOException e) {
             // Return default value
         }
 
-        return grades;
+        return assessment;
     }
 
     public boolean validateAssessments(URL url) throws IOException {
@@ -76,8 +76,12 @@ public class Quizzer {
                     boolean valid = validateAssessments(new URL(commandLine.getOptionValue("t")));
                     System.out.println(valid ? "All tests OK" : "Tests failed");
             } else if (commandLine.hasOption("a") && commandLine.hasOption("q")) {
-                HashMap<Long, Grade> grades = calculateGrades(new URL(commandLine.getOptionValue("q")),
+                Assessment assessment = calculateGrades(new URL(commandLine.getOptionValue("q")),
                         new URL(commandLine.getOptionValue("a")));
+                if (commandLine.hasOption("s")) {
+                    Gson gson = new Gson();
+                    System.out.println(gson.toJson(assessment.getStatistics()));
+                }
             } else {
                 showHelp();
             }
@@ -91,6 +95,7 @@ public class Quizzer {
         options.addOption("a", true, "URL to the answers file");
         options.addOption("o", false, "Generate output");
         options.addOption("t", true, "Validate assessments in tests file");
+        options.addOption("s", false, "Show questions statistics");
         options.addOption("h", false, "Show this help");
     }
 

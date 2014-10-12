@@ -55,6 +55,27 @@ public class Assessment {
         return grade;
     }
 
+    public HashMap<Long, Integer> getStatistics() {
+        HashMap<Long, Integer> statistics = new HashMap<>();
+
+        for (long studentId : answers.keySet()) {
+            for (Answer answer : answers.get(studentId)) {
+                long questionId = answer.getQuestionId();
+                if (questions.containsKey(questionId)) {
+                    if (questions.get(questionId).getScore(answer) > 0) {
+                        if (statistics.containsKey(questionId)) {
+                            statistics.put(questionId, statistics.get(questionId) + 1);
+                        } else {
+                            statistics.put(questionId, 1);
+                        }
+                    }
+                }
+            }
+        }
+
+        return statistics;
+    }
+
     public boolean validateGrade(Grade grade) {
         boolean valid = false;
 

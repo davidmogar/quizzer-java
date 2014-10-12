@@ -29,13 +29,13 @@ public class AssessmentTest {
         multichoiceQuestion.addAlternative(2, "Alternative 2", 0.75);
         questions.put(1L, multichoiceQuestion);
 
-        NumericalQuestion numericalQuestion = new NumericalQuestion(3, "Question 2");
+        NumericalQuestion numericalQuestion = new NumericalQuestion(2, "Question 2");
         numericalQuestion.setCorrect(4.3);
         numericalQuestion.setValueCorrect(1);
         numericalQuestion.setValueIncorrect(-0.5);
         questions.put(2L, numericalQuestion);
 
-        TrueFalseQuestion trueFalseQuestion = new TrueFalseQuestion(2, "Question 3");
+        TrueFalseQuestion trueFalseQuestion = new TrueFalseQuestion(3, "Question 3");
         trueFalseQuestion.setCorrect(true);
         trueFalseQuestion.setValueCorrect(1);
         trueFalseQuestion.setValueIncorrect(-0.25);
@@ -53,6 +53,12 @@ public class AssessmentTest {
         studentAnswers.add(new Answer(3, "false"));
         answers.put(2L, studentAnswers);
 
+        studentAnswers = new ArrayList<>();
+        studentAnswers.add(new Answer(1, "2"));
+        studentAnswers.add(new Answer(2, "2"));
+        studentAnswers.add(new Answer(3, "true"));
+        answers.put(3L, studentAnswers);
+
         assessment.setQuestions(questions);
         assessment.setAnswers(answers);
     }
@@ -61,7 +67,7 @@ public class AssessmentTest {
     public void testCalculateGrades() throws Exception {
         assessment.calculateGrades();
 
-        assertTrue("Unexpected grades size", assessment.getGrades().size() == 2);
+        assertTrue("Unexpected grades size", assessment.getGrades().size() == 3);
         assertEquals("Unexpected grade value for id 1", assessment.getGrades().get(1L).getGrade(), 2.75, 0.05);
         assertEquals("Unexpected grade value for id 2", assessment.getGrades().get(2L).getGrade(), -0.75, 0.05);
     }
@@ -71,6 +77,15 @@ public class AssessmentTest {
     public void testCalculateStudentGrade() throws Exception {
         assertEquals("Unexpected grade value for id 1", assessment.calculateStudentGrade(1), 2.75, 0.05);
         assertEquals("Unexpected grade value for id 2", assessment.calculateStudentGrade(2), -0.75, 0.05);
+    }
+
+    @Test
+    public void testGetStatistics() throws Exception {
+        HashMap<Long, Integer> statistics = assessment.getStatistics();
+
+        assertTrue("Unexpected value for statistics of question 1", statistics.get(1L) == 2);
+        assertTrue("Unexpected value for statistics of question 2", statistics.get(2L) == 1);
+        assertTrue("Unexpected value for statistics of question 3", statistics.get(3L) == 2);
     }
 
     @Test
