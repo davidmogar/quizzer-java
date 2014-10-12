@@ -7,11 +7,11 @@ This is the Java version of Quizzer, a simple application to parse JSON files wi
 ##Usage
 
 Quizzer is a command line application and can be executed with the next options:
-- `-a or --answers <arg>`: Sets the URL to the answers file.
-- `-h or --help**`: Show the help message of the app.
-- `-o or --output`: Indicate that we want to retrive the output of the action on the standard output.
-- `-q or --questions <arg>`: Sets the URL to the questions file.
-- `-t or --tests <arg>`: Validate assessments in a tests file.
+- `-a <arg>`: Sets the URL to the answers file.
+- `-h**`: Show the help message of the app.
+- `-o`: Indicate that we want to retrive the output of the action on the standard output.
+- `-q <arg>`: Sets the URL to the questions file.
+- `-t <arg>`: Validate assessments in a tests file.
 
 ##Web service
 
