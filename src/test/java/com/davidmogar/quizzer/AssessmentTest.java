@@ -83,9 +83,9 @@ public class AssessmentTest {
     public void testGetStatistics() throws Exception {
         HashMap<Long, Integer> statistics = assessment.getStatistics();
 
-        assertTrue("Unexpected value for statistics of question 1", statistics.get(1L) == 2);
-        assertTrue("Unexpected value for statistics of question 2", statistics.get(2L) == 1);
-        assertTrue("Unexpected value for statistics of question 3", statistics.get(3L) == 2);
+        assertTrue("Unexpected value for question 1 statistics", statistics.get(1L) == 2);
+        assertTrue("Unexpected value for question 2 statistics", statistics.get(2L) == 1);
+        assertTrue("Unexpected value for question 3 statistics", statistics.get(3L) == 2);
     }
 
     @Test

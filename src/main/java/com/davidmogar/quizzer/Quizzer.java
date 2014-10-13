@@ -4,6 +4,7 @@ import com.davidmogar.quizzer.domain.Grade;
 import com.davidmogar.quizzer.domain.Test;
 import com.davidmogar.quizzer.loaders.AssessmentLoader;
 import com.davidmogar.quizzer.loaders.TestsLoader;
+import com.davidmogar.quizzer.serializers.AssessmentSerializer;
 import com.google.gson.Gson;
 import org.apache.commons.cli.*;
 
@@ -38,7 +39,7 @@ public class Quizzer {
         return assessment;
     }
 
-    public boolean validateAssessments(URL url) throws IOException {
+    public void validateAssessments(URL url) throws IOException {
         boolean valid = true;
 
         for (Test test : TestsLoader.loadTests(url)) {
@@ -58,29 +59,30 @@ public class Quizzer {
             }
         }
 
-        return valid;
+        System.out.println(valid ? "All tests OK" : "Tests failed");
     }
 
     private void parseArguments(String[] args) throws IOException {
-        CommandLineParser parser = new BasicParser();
-        CommandLine commandLine = null;
-
         try {
-            commandLine = parser.parse(options, args);
+            CommandLine commandLine = new BasicParser().parse(options, args);
 
             if (args.length == 0) {
                 Server.startServer();
             } else if (commandLine.hasOption("h")) {
                 showHelp();
             } else if (commandLine.hasOption("t")) {
-                    boolean valid = validateAssessments(new URL(commandLine.getOptionValue("t")));
-                    System.out.println(valid ? "All tests OK" : "Tests failed");
+                validateAssessments(new URL(commandLine.getOptionValue("t")));
             } else if (commandLine.hasOption("a") && commandLine.hasOption("q")) {
                 Assessment assessment = calculateGrades(new URL(commandLine.getOptionValue("q")),
                         new URL(commandLine.getOptionValue("a")));
+
+                AssessmentSerializer.Format format = commandLine.hasOption("o")? parseFormat(commandLine
+                        .getOptionValue("o")) : AssessmentSerializer.Format.JSON;
+
+                showGrades(assessment.getGrades(), format);
+
                 if (commandLine.hasOption("s")) {
-                    Gson gson = new Gson();
-                    System.out.println(gson.toJson(assessment.getStatistics()));
+                    showStatistics(assessment.getStatistics(), format);
                 }
             } else {
                 showHelp();
@@ -90,13 +92,31 @@ public class Quizzer {
         }
     }
 
+    private AssessmentSerializer.Format parseFormat(String formatString) {
+        AssessmentSerializer.Format format;
+
+        try {
+            format = AssessmentSerializer.Format.valueOf(formatString.toUpperCase());
+        } catch(Exception e) {
+            format = AssessmentSerializer.Format.JSON;
+        }
+
+        return format;
+    }
+
     private void setCommandLineOptions() {
         options.addOption("q", true, "URL to the questions file");
         options.addOption("a", true, "URL to the answers file");
-        options.addOption("o", false, "Generate output");
+        options.addOption("o", true, "Generate output");
         options.addOption("t", true, "Validate assessments in tests file");
         options.addOption("s", false, "Show questions statistics");
         options.addOption("h", false, "Show this help");
+    }
+
+    private void showGrades(HashMap<Long, Grade> grades, AssessmentSerializer.Format format) {
+        System.out.println("Assessment's grades:");
+        System.out.println(AssessmentSerializer.serializeGrades(grades, format) + "\n");
+
     }
 
     private void showHelp() {
@@ -104,11 +124,16 @@ public class Quizzer {
         helpFormatter.printHelp("java Quizzer [options]", options);
     }
 
+    private void showStatistics(HashMap<Long, Integer> statistics, AssessmentSerializer.Format format) {
+        System.out.println("Assessment's statistics:");
+        System.out.println(AssessmentSerializer.serializeStatistics(statistics, format) + "\n");
+    }
+
     public static void main(String[] args) {
         Quizzer quizzer = new Quizzer();
         try {
             quizzer.parseArguments(args);
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.err.append("There was a problem while executing the program: " + e.getMessage());
         }
     }
