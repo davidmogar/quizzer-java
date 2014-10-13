@@ -107,7 +107,7 @@ public class Quizzer {
     private void setCommandLineOptions() {
         options.addOption("q", true, "URL to the questions file");
         options.addOption("a", true, "URL to the answers file");
-        options.addOption("o", true, "Generate output");
+        options.addOption("o", true, "Generate output in the specified format (json or xml)");
         options.addOption("t", true, "Validate assessments in tests file");
         options.addOption("s", false, "Show questions statistics");
         options.addOption("h", false, "Show this help");

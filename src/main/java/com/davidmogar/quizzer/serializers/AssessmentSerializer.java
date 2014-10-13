@@ -19,7 +19,6 @@ public class AssessmentSerializer {
                 break;
             default: /* Json */
                 result = AssessmentJsonSerializer.serializeGrades(grades);
-                break;
         }
 
         return result;
