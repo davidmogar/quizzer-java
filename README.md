@@ -9,9 +9,12 @@ This is the Java version of Quizzer, a simple application to parse JSON files wi
 Quizzer is a command line application and can be executed with the next options:
 - `-a <arg>`: Sets the URL to the answers file.
 - `-h`: Show the help message of the app.
-- `-o`: Generate output in the specified format (json or xml)"
+- `-o <arg>`: Generate output in the specified format (json or xml)"
 - `-q <arg>`: Sets the URL to the questions file.
+- `-s`: Show questions statistics.
 - `-t <arg>`: Validate assessments in a tests file.
+
+As an example, the command `quizzer.php -q questions.json -a answers.json -o xml -s` will generate grades and statistics for the given assessment data and will show the result as xml files in the standard output.
 
 ##Web service
 
