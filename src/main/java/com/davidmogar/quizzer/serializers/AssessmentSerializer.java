@@ -11,7 +11,7 @@ public class AssessmentSerializer {
      *
      * @param grades grades to serialize
      * @param format format of the output
-     * @return an string with the representation in the desired format.
+     * @return an string with the representation in the desired format
      */
     public static String serializeGrades(HashMap<Long, Grade> grades, Format format) {
         String result;

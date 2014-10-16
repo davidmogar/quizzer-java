@@ -23,10 +23,10 @@ public class AssessmentDeserializer {
     }
 
     /**
-     * Deserializes the JSON representation received as arguments to a map of grades ids to Grade objects.
+     * Deserializes the JSON representation received as arguments to a map of student ids to Grade objects.
      *
      * @param json JSON representation of the grades objects
-     * @return a map of grades ids to Grade objects
+     * @return a map of student ids to Grade objects
      * @throws JsonParseException if the json is invalid
      */
     @SuppressWarnings("unchecked")
