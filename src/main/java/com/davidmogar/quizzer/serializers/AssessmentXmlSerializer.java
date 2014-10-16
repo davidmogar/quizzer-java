@@ -1,16 +1,18 @@
 package com.davidmogar.quizzer.serializers;
 
 import com.davidmogar.quizzer.domain.Grade;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class AssessmentXmlSerializer {
 
+    /**
+     * Returns an string with the representation of the grades in XML format.
+     *
+     * @param grades grades to serialize
+     * @return an string with the representation in the desired format.
+     */
     public static String serializeGrades(HashMap<Long, Grade> grades) {
         String result = "<scores>\n";
 
@@ -22,6 +24,12 @@ public class AssessmentXmlSerializer {
         return result + "</scores>";
     }
 
+    /**
+     * Returns an string with the representation of the statistics in XML format.
+     *
+     * @param statistics statistics to serialize
+     * @return an string with the representation in the desired format.
+     */
     public static String serializeStatistics(HashMap<Long, Integer> statistics) {
         String result = "<statistics>\n";
 

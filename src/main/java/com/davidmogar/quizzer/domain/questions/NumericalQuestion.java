@@ -12,6 +12,9 @@ public class NumericalQuestion extends Question {
         super(id, text);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public double getScore(Answer answer) {
         double score = 0;

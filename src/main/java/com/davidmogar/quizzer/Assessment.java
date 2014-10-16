@@ -36,9 +36,10 @@ public class Assessment {
     }
 
     /**
-     * Calculate the grade of a given student.
-     * @param studentId Id of the student
-     * @return Grade of the student
+     * Calculates the grade of a given student.
+     *
+     * @param studentId id of the student
+     * @return calculated grade of the student
      */
     public double calculateStudentGrade(long studentId) {
         double grade = 0;
@@ -55,6 +56,11 @@ public class Assessment {
         return grade;
     }
 
+    /**
+     * Returns a HashMap mapping each question id with the number of correct answers of that question.
+     *
+     * @return a HashMap with the questions' statistics
+     */
     public HashMap<Long, Integer> getStatistics() {
         HashMap<Long, Integer> statistics = new HashMap<>();
 
@@ -76,6 +82,13 @@ public class Assessment {
         return statistics;
     }
 
+    /**
+     * Validates the grade received as argument, checking that the value stored correspond to the grade obtained by
+     * the student.
+     *
+     * @param grade grade to validate
+     * @return <code>true</code> if the grade is valid, <code>false</code> otherwise
+     */
     public boolean validateGrade(Grade grade) {
         boolean valid = false;
 
@@ -86,6 +99,12 @@ public class Assessment {
         return valid;
     }
 
+    /**
+     * Validate all the grades of this assessment, checking that all the values stored in each grade correspond to
+     * the actual grade obtained by the students.
+     *
+     * @return <code>true</code> if all the grades are valid, <code>false</code> otherwise
+     */
     public boolean validateGrades() {
         boolean valid = true;
 

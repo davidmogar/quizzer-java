@@ -11,8 +11,9 @@ public class UrlReader {
 
     /**
      * Gets the content of the URL as an String.
+     *
      * @param url URL to fetch data from
-     * @return String with the URL contents
+     * @return string with the URL contents
      * @throws IOException if URL was invalid or the connection was refused
      */
     public static String getStreamAsString(URL url) throws IOException {

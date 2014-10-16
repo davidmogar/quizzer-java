@@ -27,6 +27,12 @@ public class AnswersDeserializer implements JsonDeserializer<HashMap<Long, List<
         return answers;
     }
 
+    /**
+     * Returns a list of answers created from the data stored in the JsonObjects inside the array.
+     *
+     * @param array array of JsonObjects with answers data
+     * @return list of answers
+     */
     private List<Answer> getAnswers(JsonArray array) {
         ArrayList<Answer> answers = new ArrayList<>();
 

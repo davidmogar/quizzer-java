@@ -6,10 +6,13 @@ import java.util.HashMap;
 
 public class AssessmentSerializer {
 
-    public enum Format {
-        JSON, XML
-    }
-
+    /**
+     * Returns an string with the representation of the grades in the desired format.
+     *
+     * @param grades grades to serialize
+     * @param format format of the output
+     * @return an string with the representation in the desired format.
+     */
     public static String serializeGrades(HashMap<Long, Grade> grades, Format format) {
         String result;
 
@@ -24,6 +27,13 @@ public class AssessmentSerializer {
         return result;
     }
 
+    /**
+     * Returns an string with the representation of the statistics in the desired format.
+     *
+     * @param statistics statistics to serialize
+     * @param format     format of the output
+     * @return an string with the representation in the desired format.
+     */
     public static String serializeStatistics(HashMap<Long, Integer> statistics, Format format) {
         String result;
 
@@ -37,5 +47,9 @@ public class AssessmentSerializer {
         }
 
         return result;
+    }
+
+    public enum Format {
+        JSON, XML
     }
 }

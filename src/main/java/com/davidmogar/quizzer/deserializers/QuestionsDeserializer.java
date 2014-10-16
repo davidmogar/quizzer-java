@@ -1,7 +1,6 @@
 package com.davidmogar.quizzer.deserializers;
 
 
-import com.davidmogar.quizzer.domain.Grade;
 import com.davidmogar.quizzer.domain.questions.MultichoiceQuestion;
 import com.davidmogar.quizzer.domain.questions.NumericalQuestion;
 import com.davidmogar.quizzer.domain.questions.Question;
@@ -29,6 +28,12 @@ public class QuestionsDeserializer implements JsonDeserializer<HashMap<Long, Que
         return questions;
     }
 
+    /**
+     * Returns a new Question of the type specified in the JsonObject argument.
+     *
+     * @param object data of the question to be created
+     * @return new question
+     */
     private Question createQuestion(JsonObject object) {
         Question question = null;
 
@@ -43,7 +48,7 @@ public class QuestionsDeserializer implements JsonDeserializer<HashMap<Long, Que
                 case "truefalse":
                     question = createTrueFalseQuestion(object);
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             // Impossible to parse object. Skip it
         }
 
@@ -63,7 +68,7 @@ public class QuestionsDeserializer implements JsonDeserializer<HashMap<Long, Que
                         alternativeObject.get("text").getAsString(), alternativeObject.get("value").getAsDouble());
 
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             // Impossible to parse object. Skip it
         }
 

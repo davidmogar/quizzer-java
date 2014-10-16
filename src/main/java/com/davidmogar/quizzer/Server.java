@@ -18,6 +18,9 @@ import static spark.SparkBase.staticFileLocation;
 
 public class Server {
 
+    /**
+     * Starts the Spark server and define get and post routes.
+     */
     public static void startServer() {
 
         /* Static files location */

@@ -18,6 +18,9 @@ public class MultichoiceQuestion extends Question {
         alternatives.put(id, new Alternative(id, text, value));
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public double getScore(Answer answer) {
         double score = 0;

@@ -11,6 +11,12 @@ import java.util.List;
 
 public class TestsDeserializer {
 
+    /**
+     * Deserializes the JSON representation received as arguments to a list of Test objects.
+     *
+     * @param json JSON representation of Test objects
+     * @return a list containing the tests deserialized
+     */
     @SuppressWarnings("unchecked")
     public static List<Test> deserialize(String json) {
         JsonParser parser = new JsonParser();
@@ -25,11 +31,14 @@ public class TestsDeserializer {
 
 }
 
+/**
+ * Utility class used to deserialize a JSON containing tests.
+ */
 class TestsJsonDeserializer implements JsonDeserializer<List<Test>> {
 
     @Override
     public List<Test> deserialize(JsonElement jsonElement, Type type,
-                                                   JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
+                                  JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
         List<Test> tests = new ArrayList<>();
 
         JsonElement rootElement = jsonElement.getAsJsonObject().get("tests");
@@ -41,6 +50,12 @@ class TestsJsonDeserializer implements JsonDeserializer<List<Test>> {
         return tests;
     }
 
+    /**
+     * Creates a Test object with the data obtained from the JsonObject.
+     *
+     * @param object JsonObject with the data of the Test
+     * @return new Test
+     */
     private Test createTest(JsonObject object) {
         Test test = null;
 
@@ -50,13 +65,20 @@ class TestsJsonDeserializer implements JsonDeserializer<List<Test>> {
             URL gradesUrl = getUrl(object.get("scores").getAsString());
 
             test = new Test(questionsUrl, answersUrl, gradesUrl);
-        } catch(Exception e) {
+        } catch (Exception e) {
             // Impossible to parse object. Skip it
         }
 
         return test;
     }
 
+    /**
+     * Returns the parsed URL. This method is needed to load resources from external servers,
+     * files in the computer and files in the resources directory.
+     *
+     * @param path path of the file
+     * @return URL of the file
+     */
     private URL getUrl(String path) {
         URL url = null;
 

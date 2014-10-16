@@ -12,6 +12,12 @@ public abstract class Question {
         this.text = text;
     }
 
+    /**
+     * Calculates the score obtained by an student given its answer
+     *
+     * @param answer answer of the student to this question
+     * @return calculated score
+     */
     public abstract double getScore(Answer answer);
 
     public long getId() {

@@ -25,6 +25,12 @@ public class GradesDeserializer implements JsonDeserializer<HashMap<Long, Grade>
         return grades;
     }
 
+    /**
+     * Returns a new Grade with the data extracted from the JsonObject argument.
+     *
+     * @param object JsonObject with grade data
+     * @return a new grade
+     */
     private Grade createGrade(JsonObject object) {
         Grade grade = null;
 

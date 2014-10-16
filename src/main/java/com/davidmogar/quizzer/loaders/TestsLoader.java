@@ -10,6 +10,13 @@ import java.util.List;
 
 public class TestsLoader {
 
+    /**
+     * Returns a list of tests objects loaded from the file referenced by the URL argument.
+     *
+     * @param testsUrl URL to the tests file
+     * @return a list of tests objects
+     * @throws IOException if there is an error while fetching content from the given URL
+     */
     public static List<Test> loadTests(URL testsUrl) throws IOException {
         if (testsUrl == null) {
             throw new IllegalArgumentException("Tests URL cannot be null");

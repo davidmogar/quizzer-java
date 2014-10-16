@@ -13,6 +13,9 @@ public class TrueFalseQuestion extends Question {
         super(id, questionText);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public double getScore(Answer answer) {
         double score = 0;
