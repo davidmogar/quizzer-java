@@ -1,6 +1,7 @@
 package com.davidmogar.quizzer;
 
 import com.davidmogar.quizzer.loaders.AssessmentLoader;
+import com.davidmogar.quizzer.serializers.AssessmentSerializer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import spark.ModelAndView;
@@ -8,6 +9,7 @@ import spark.template.freemarker.*;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 
 import static spark.Spark.get;
 import static spark.Spark.post;
@@ -31,21 +33,24 @@ public class Server {
             String questionsJson = req.queryParams("questions");
             String answersJson = req.queryParams("answers");
 
-            String response = "Invalid input";
+            String jsonGrades = "Invalid input";
 
             if (questionsJson != null && answersJson != null) {
                 try {
                     Assessment assessment = AssessmentLoader.loadAssessment(questionsJson, answersJson, null);
                     assessment.calculateGrades();
-                    Gson gson = new GsonBuilder().create();
-                    response = gson.toJson(assessment.getGrades());
+                    jsonGrades = AssessmentSerializer.serializeGrades(assessment.getGrades(),
+                            AssessmentSerializer.Format.JSON);
                 } catch (IOException e) {
                     /* Return default value */
                 }
             }
 
-            return response;
-        });
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("grades", jsonGrades);
+
+            return new ModelAndView(attributes, "grades.ftl");
+        }, new FreeMarkerEngine());
     }
 
 }
