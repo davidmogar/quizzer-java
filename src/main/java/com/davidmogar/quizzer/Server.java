@@ -17,7 +17,6 @@ import static spark.SparkBase.staticFileLocation;
 public class Server {
 
     public static void startServer() {
-        setPort(3000);
 
         /* Static files location */
         staticFileLocation("public");
