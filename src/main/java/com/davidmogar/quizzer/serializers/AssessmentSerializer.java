@@ -32,7 +32,7 @@ public class AssessmentSerializer {
      *
      * @param statistics statistics to serialize
      * @param format     format of the output
-     * @return an string with the representation in the desired format.
+     * @return an string with the representation in the desired format
      */
     public static String serializeStatistics(HashMap<Long, Integer> statistics, Format format) {
         String result;
