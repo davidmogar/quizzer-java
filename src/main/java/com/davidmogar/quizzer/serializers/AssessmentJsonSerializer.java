@@ -15,7 +15,7 @@ public class AssessmentJsonSerializer {
      * Returns an string with the representation of the grades in JSON format.
      *
      * @param grades grades to serialize
-     * @return an string with the representation in the desired format.
+     * @return an string with the representation in the desired format
      */
     public static String serializeGrades(HashMap<Long, Grade> grades) {
         JsonObject rootObject = new JsonObject();
@@ -38,7 +38,7 @@ public class AssessmentJsonSerializer {
      * Returns an string with the representation of the statistics in JSON format.
      *
      * @param statistics statistics to serialize
-     * @return an string with the representation in the desired format.
+     * @return an string with the representation in the desired format
      */
     public static String serializeStatistics(HashMap<Long, Integer> statistics) {
         JsonObject rootObject = new JsonObject();
