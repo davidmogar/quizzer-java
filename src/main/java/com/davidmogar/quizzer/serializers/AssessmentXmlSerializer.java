@@ -35,7 +35,7 @@ public class AssessmentXmlSerializer {
 
         for (Map.Entry<Long, Integer> entry : statistics.entrySet()) {
             result += "\t<item>\n\t\t<questionId>" + entry.getKey() + "</questionId>\n";
-            result += "\t\t<correctAnswers>" + entry.getValue() + "</correctAnswrs>\n\t</item>\n";
+            result += "\t\t<correctAnswers>" + entry.getValue() + "</correctAnswers>\n\t</item>\n";
         }
 
         return result + "</statistics>";
