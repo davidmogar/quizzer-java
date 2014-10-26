@@ -29,14 +29,14 @@ public class Quizzer {
      * Calculate assessments' grades given the urls to the questions and answers files.
      *
      * @param questionsUrl URL to the questions file
-     * @param answersURL URL to the answers file
+     * @param answersUrl URL to the answers file
      * @return a new assessment with containing questions, answers and calculated grades
      */
-    public Assessment calculateGrades(URL questionsUrl, URL answersURL) {
+    public Assessment calculateGrades(URL questionsUrl, URL answersUrl) {
         Assessment assessment = null;
 
         try {
-            assessment = AssessmentLoader.loadAssessment(questionsUrl, answersURL, null);
+            assessment = AssessmentLoader.loadAssessment(questionsUrl, answersUrl, null);
             if (assessment != null) {
                 assessment.calculateGrades();
             }
@@ -45,35 +45,6 @@ public class Quizzer {
         }
 
         return assessment;
-    }
-
-    /**
-     * Validate tests inside of the file referenced by the URL argument.
-     *
-     * @param url URL to the tests file
-     * @throws IOException if there is an error while loading tests
-     */
-    public void validateAssessments(URL url) throws IOException {
-        boolean valid = true;
-
-        for (Test test : TestsLoader.loadTests(url)) {
-            try {
-                Assessment assessment = AssessmentLoader.loadAssessment(test.getQuestionsUrl(), test.getAnswersUrl(),
-                        test.getGradesUrl());
-                if (assessment != null) {
-                    if (assessment.validateGrades()) {
-                        System.out.println("Test valid");
-                    } else {
-                        valid = false;
-                        System.err.println("Test not valid");
-                    }
-                }
-            } catch (IOException e) {
-                valid = false;
-            }
-        }
-
-        System.out.println(valid ? "All tests OK" : "Tests failed");
     }
 
     /**
@@ -171,6 +142,35 @@ public class Quizzer {
     private void showStatistics(HashMap<Long, Integer> statistics, AssessmentSerializer.Format format) {
         System.out.println("Assessment's statistics:");
         System.out.println(AssessmentSerializer.serializeStatistics(statistics, format) + "\n");
+    }
+
+    /**
+     * Validate tests inside of the file referenced by the URL argument.
+     *
+     * @param url URL to the tests file
+     * @throws IOException if there is an error while loading tests
+     */
+    public void validateAssessments(URL url) throws IOException {
+        boolean valid = true;
+
+        for (Test test : TestsLoader.loadTests(url)) {
+            try {
+                Assessment assessment = AssessmentLoader.loadAssessment(test.getQuestionsUrl(), test.getAnswersUrl(),
+                        test.getGradesUrl());
+                if (assessment != null) {
+                    if (assessment.validateGrades()) {
+                        System.out.println("Test valid");
+                    } else {
+                        valid = false;
+                        System.err.println("Test not valid");
+                    }
+                }
+            } catch (IOException e) {
+                valid = false;
+            }
+        }
+
+        System.out.println(valid ? "All tests OK" : "Tests failed");
     }
 
     public static void main(String[] args) {

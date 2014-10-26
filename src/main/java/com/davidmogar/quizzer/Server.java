@@ -2,10 +2,8 @@ package com.davidmogar.quizzer;
 
 import com.davidmogar.quizzer.loaders.AssessmentLoader;
 import com.davidmogar.quizzer.serializers.AssessmentSerializer;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import spark.ModelAndView;
-import spark.template.freemarker.*;
+import spark.template.freemarker.FreeMarkerEngine;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -13,7 +11,6 @@ import java.util.Map;
 
 import static spark.Spark.get;
 import static spark.Spark.post;
-import static spark.SparkBase.setPort;
 import static spark.SparkBase.staticFileLocation;
 
 public class Server {
