@@ -16,6 +16,9 @@ Quizzer is a command line application and can be executed with the next options:
 
 As an example, the arguments `-q questions.json -a answers.json -o xml -s` will generate grades and statistics for the given assessment data and will show the result as xml files in the standard output.
 
+###Dependencies
+Quizzer requires JRE 8.0 or higher to run.
+
 ##Web service
 
 The app can be used as a web server if it is launched without arguments. In this mode you can navitate to [localhost:4567](http://localhost:4567) what would return the next form that can be used to generate grades.
